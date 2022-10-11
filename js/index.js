@@ -5,10 +5,7 @@ const evento = document.getElementById("loginbtn");
 async function login(){
     const user = document.getElementById("edtUser").value;
     const pass = document.getElementById("edtPass").value;
-    /*
-    console.log(user);
-    console.log(pass);
-    */
+    
     const sesion = loginValidation(user,pass);
 
     const validation = await sesion;
