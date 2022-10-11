@@ -1,0 +1,9 @@
+body{
+    background-image: linear-gradient(to left,#bd8736, #d13a0c);
+};
+
+#loginCard{
+    -webkit-box-shadow: 10px 7px 20px -4px rgba(0,0,0,0.4);
+    -moz-box-shadow: 10px 7px 20px -4px rgba(0,0,0,0.4);
+    box-shadow: 10px 7px 20px -4px rgba(0,0,0,0.4);
+}
