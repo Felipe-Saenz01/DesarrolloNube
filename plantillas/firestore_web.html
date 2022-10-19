@@ -9,53 +9,40 @@
     <title>Firestore</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Firestore</h1>
-        <form class="row g-3">
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" class="form-control" id="edtEmail">
-            </div>
-            <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">Password</label>
-              <input type="password" class="form-control" id="edtPass">
-            </div>
-            <div class="col-md-6">
-              <label for="inputAddress" class="form-label">Departamento</label>
-              <input type="text" class="form-control" id="edtDepartamento" placeholder="">
-            </div>
-            <div class="col-md-6">
-              <label for="inputAddress2" class="form-label">Ciudad</label>
-              <input type="text" class="form-control" id="edtCity" placeholder="">
-            </div>
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">Dirección</label>
-              <input type="text" class="form-control" id="edtDireccion">
-            </div>
-            <!--div class="col-md-4">
-              <label for="inputState" class="form-label">State</label>
-              <select id="inputState" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
-              </select>
-            </div>
-            <div class="col-md-2">
-              <label for="inputZip" class="form-label">Zip</label>
-              <input type="text" class="form-control" id="inputZip">
-            </div>
-            <div class="col-12">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck">
-                  Check me out
-                </label>
+    <div class="container ">
+      <div class="row">
+        <div class="col-12 offset-md ">
+          <h1>Firestore</h1>
+          <form class="row g-3" id="formFirestore">
+              <div class="col-md-6">
+                <label for="inputName" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="edtName">
               </div>
-            </div-->
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary">Register</button>
-            </div>
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="edtEmail">
+              </div>
+              <div class="col-md-6">
+                <label for="inputAddress" class="form-label">Departamento</label>
+                <input type="text" class="form-control" id="edtDep" placeholder="">
+              </div>
+              <div class="col-md-6">
+                <label for="inputAddress2" class="form-label">Ciudad</label>
+                <input type="text" class="form-control" id="edtCit" placeholder="">
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="edtDir">
+              </div>
+  
+              <div class="col-12">
+                <button class="btn btn-primary">Register</button>
+              </div>
           </form>
+        </div>
+
+      </div>
     </div>
-    
+    <script type="module" src="../js/register_firestore.js"></script>
 </body>
 </html>

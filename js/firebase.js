@@ -3,7 +3,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase
 //metodo para el ingreso de usuarios
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js';
 //metodo para usar los servicios de Firestore
-import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js';
+import { getFirestore, collection, addDoc, setDoc, doc } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js';
 
 
 const firebaseConfig = {
@@ -28,10 +28,23 @@ export const loginValidation = (email,password) => signInWithEmailAndPassword(au
 
 export const registerUser = (email,password) => createUserWithEmailAndPassword(auth, email, password)
 
+////método para guardar en firestore designando un token aleatorio
 export const registerAddDoc = (email, password, departamento, ciudad, direccion) => {
   addDoc(collection(db, "users"),{
     email,
     password,
+    departamento,
+    ciudad,
+    direccion
+  })
+
+}
+
+//método para guardar en firestore designando un parametro como token
+export const registerSetDoc = (nombre, email, departamento, ciudad, direccion) => {
+  setDoc(doc(db, "DBusers", email),{
+    nombre,
+    email,
     departamento,
     ciudad,
     direccion
