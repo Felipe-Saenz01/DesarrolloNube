@@ -1,9 +1,10 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
 //metodo para el ingreso de usuarios
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js';
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
 //metodo para usar los servicios de Firestore
-import { getFirestore, collection, addDoc, setDoc, doc } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js';
+import { getFirestore, collection, addDoc, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js";
 
 
 const firebaseConfig = {
@@ -41,13 +42,17 @@ export const registerAddDoc = (email, password, departamento, ciudad, direccion)
 }
 
 //método para guardar en firestore designando un parametro como token
-export const registerSetDoc = (nombre, email, departamento, ciudad, direccion) => {
+export const registerSetDoc = (nombre, apellido, direccion, genero, rh, telefono, departamento, ciudad, email) => {
   setDoc(doc(db, "DBusers", email),{
     nombre,
-    email,
+    apellido,
+    direccion,
+    genero,
+    rh,
+    telefono,
     departamento,
     ciudad,
-    direccion
+    email
   })
 
 }
