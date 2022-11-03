@@ -23,7 +23,7 @@ const app = initializeApp(firebaseConfig);
 //Initialize Autentication Login
 const auth = getAuth();
 // Initialize Firestore
-const db = getFirestore(app);
+export const db = getFirestore(app);
 
 export const loginValidation = (email,password) => signInWithEmailAndPassword(auth, email, password)
 
