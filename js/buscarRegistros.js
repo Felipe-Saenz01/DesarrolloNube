@@ -1,5 +1,6 @@
 import { db } from "./firebase.js";
 import { doc, getDoc } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js";
+import { showAlert } from "./showAlert.js";
 
     
 //método para obtener datos especificos de firestore indicando nombre de la base de datos y el id o token
@@ -26,9 +27,9 @@ export const getDetails = async (email) =>{
         Development Cloud
       </div>
       `;
-      } else {
-      console.log("No such document!");
-      }
+    } else {
+      showAlert("No se encontrarón datos asociados a ese Email.", "error");
+    }
     
 
 
