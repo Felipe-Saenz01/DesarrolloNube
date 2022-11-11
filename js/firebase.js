@@ -42,7 +42,7 @@ export const registerAddDoc = (email, password, departamento, ciudad, direccion)
 }
 
 //método para guardar en firestore designando un parametro como token
-export const registerSetDoc = (nombre, apellido, direccion, genero, rh, telefono, departamento, ciudad, email) => {
+export const registerSetDoc = (nombre, apellido, direccion, genero, rh, telefono, departamento, ciudad, email, imagen) => {
   setDoc(doc(db, "DBusers", email),{
     nombre,
     apellido,
@@ -52,7 +52,8 @@ export const registerSetDoc = (nombre, apellido, direccion, genero, rh, telefono
     telefono,
     departamento,
     ciudad,
-    email
+    email,
+    imagen
   })
 
 }

@@ -65,6 +65,7 @@ form.addEventListener('submit',(evento)=>{
     const confirmEmail = document.getElementById("edtConfirmEmail");
     const password = document.getElementById("edtPass");
     const confirmPassword = document.getElementById("edtConfirmPass");
+    const imagen = document.getElementById("response");
 
     if(email.value != confirmEmail.value){
         showAlert("Los correos no coinciden.", "alert")
@@ -76,17 +77,17 @@ form.addEventListener('submit',(evento)=>{
 	    return;
     }
 
-    registroAuth(nombre.value, apellido.value, direccion.value, genero.value, rh, telefono.value, departamento, ciudad, email.value, password.value);
+    registroAuth(nombre.value, apellido.value, direccion.value, genero.value, rh, telefono.value, departamento, ciudad, email.value, password.value, imagen.value);
 
 
 });
 
 
-async function registroAuth(nombre, apellido, direccion, genero, rh, telefono, departamento, ciudad, email,password){
+async function registroAuth(nombre, apellido, direccion, genero, rh, telefono, departamento, ciudad, email,password, imagen){
     try {
         const autentication = await registerUser(email,password);
         showAlert("Usuario: "+autentication.user.email+", registrado.", "succes")
-        registerSetDoc(nombre, apellido, direccion, genero, rh, telefono, departamento, ciudad, email);
+        registerSetDoc(nombre, apellido, direccion, genero, rh, telefono, departamento, ciudad, email,imagen);
         form.reset();
         
     } catch (error) {

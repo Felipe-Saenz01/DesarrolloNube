@@ -254,6 +254,49 @@
                                     </div>
                                 </div>
 						    </div>
+
+                            <!-------Elemento Archivo------------------>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <div class="input-group ">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <i class="bi bi-image"></i>
+                                            </span>
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <input 
+                                            type="file" 
+                                            id="edtFile" 
+                                            name="" 
+                                            class="form-control input_pass"
+                                            accept="image/*;capture=camera"
+                                            single
+                                            required
+                                        >
+                                </div>
+                                <!-- input base 64 -->
+                                <div class="col-12 mb-3">
+                                    <div class="input-group ">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <i class="bi bi-image-fill"></i>
+                                            </span>
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <input 
+                                            type="text" 
+                                            id="response"
+                                            placeholder="Base64" 
+                                            name="" 
+                                            class="form-control input_pass"
+                                            required
+                                        >
+                                    </div>
+                                </div>
+
+						    </div>
+
                             <div class="mb-3">
                                 <button class="btn btn-success">Register</button>
                                 <!---input type="button" name="button" value="Register" class="btn btn-success" id="registerbtn" --->
@@ -267,8 +310,12 @@
             </div>
         </div>
     </div>
+     <!-- Js JQuery -->
+     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <!-- JS Register user -->
     <script type="module" src="../js/register_user.js"></script>
+    <!-- JS Base64 Script -->
+    <script type="module" src="../js/base64.js"></script>
     <!-- JS Toastify -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
