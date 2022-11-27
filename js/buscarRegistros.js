@@ -10,7 +10,7 @@ const getDetails = async (email) =>{
     const docRef = doc(db, "DBusers", email);
     
     const docSnap = await getDoc(docRef);
-    console.log(docSnap.data())
+    //console.log(docSnap.data())
     if (docSnap.exists()) {
       // console.log("Document data:", docSnap.data());
       // console.log("Document data:", docSnap.data().nombre);

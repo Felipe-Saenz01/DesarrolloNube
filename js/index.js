@@ -12,7 +12,7 @@ async function login(){
 
     if (validation != null) {
         alert("User authentication: "+user);
-        window.location.href="../plantillas/home.html";
+                window.location.href="../plantillas/home.html";
     }else{
         console.log("Error ");
         alert("Error al Ingresar");
